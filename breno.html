@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog do Breno Zanin</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="header-container">
+            <div class="logo">
+                <h1>Blog do Breno Zanin</h1>
+                <p>Estudante & Futuro Engenheiro de Software</p>
+            </div>
+            
+            <button id="theme-toggle" class="theme-btn" title="Alternar Modo Escuro/Claro">
+                <svg class="half-moon-icon" viewBox="0 0 24 24" width="22" height="22">
+                    <path d="M12 2A10 10 0 0 0 12 22V2z" fill="currentColor"/>
+                    <circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/>
+                </svg>
+                <span id="theme-text">Modo Escuro</span>
+            </button>
+        </div>
+    </header>
+
+    <main class="main-content">
+
+        <article class="post">
+            <span class="post-tag">Apresentação</span>
+            <h2 class="post-title">Bem-vindos ao meu Blog! 👋</h2>
+            <div class="post-date">Publicado por Breno Zanin</div>
+            <div class="post-body">
+                <p>Olá a todos! Sejam muito bem-vindos ao meu blog pessoal.</p>
+                <p>Meu nome é <strong>Breno Zanin</strong> e sou estudante do <strong>Colégio Estadual Presidente Vargas</strong>. Criei este espaço para compartilhar um pouco sobre quem eu sou, minha rotina, minhas metas e os aprendizados do meu dia a dia.</p>
+                <p>Espero que vocês gostem e voltem sempre para acompanhar as novidades!</p>
+            </div>
+            <div class="post-actions">
+                <button class="action-btn like-btn" onclick="handleLike(this)">
+                    <span class="icon">❤️</span>
+                    <span class="count">0</span>
+                </button>
+                <button class="action-btn dislike-btn" onclick="handleDislike(this)">
+                    <span class="icon">👎</span>
+                    <span class="count">0</span>
+                </button>
+            </div>
+        </article>
+
+        <article class="post">
+            <span class="post-tag">Objetivos & Futuro</span>
+            <h2 class="post-title">Minhas Metas e Meu Futuro 🚀</h2>
+            <div class="post-date">Publicado por Breno Zanin</div>
+            <div class="post-body">
+                <p>Pensar no futuro é algo que me motiva a dar o meu melhor todos os dias. Tenho objetivos bem definidos que pretendo conquistar:</p>
+                <ul>
+                    <li>🎓 <strong>Estudos:</strong> Terminar meus estudos com dedicação no Colégio Estadual Presidente Vargas.</li>
+                    <li>💻 <strong>Faculdade:</strong> Ingressar no curso de <strong>Engenharia de Software</strong> e me tornar um excelente profissional da tecnologia.</li>
+                    <li>🏠 <strong>Vida Pessoal:</strong> Construir um futuro próspero, ter uma família abençoada e poder estabelecer o bom e o melhor para todos nós.</li>
+                </ul>
+            </div>
+            <div class="post-actions">
+                <button class="action-btn like-btn" onclick="handleLike(this)">
+                    <span class="icon">❤️</span>
+                    <span class="count">0</span>
+                </button>
+                <button class="action-btn dislike-btn" onclick="handleDislike(this)">
+                    <span class="icon">👎</span>
+                    <span class="count">0</span>
+                </button>
+            </div>
+        </article>
+
+        <article class="post">
+            <span class="post-tag">Hobbies & Lazer</span>
+            <h2 class="post-title">O Que Eu Gosto de Fazer ⚽🎮</h2>
+            <div class="post-date">Publicado por Breno Zanin</div>
+            <div class="post-body">
+                <p>Nos meus momentos livres, gosto de focar no meu bem-estar, na minha família e na diversão. Aqui estão algumas das minhas atividades favoritas:</p>
+                <ul class="hobbies-list">
+                    <li>⚽ <strong>Jogar bola:</strong> Praticar futebol com os amigos para relaxar e se exercitar.</li>
+                    <li>👧 <strong>Brincar com minha irmã:</strong> Passar momentos divertidos e dar boas risadas em família.</li>
+                    <li>🗣️ <strong>Conversar com minha família:</strong> Manter a união e trocar boas conversas diariamente.</li>
+                    <li>🏋️ <strong>Treinar:</strong> Manter o foco na saúde e no treino constante.</li>
+                    <li>🎮 <strong>Jogar jogos:</strong> Fazer aquela jogatina de games para distrair a mente.</li>
+                </ul>
+            </div>
+            <div class="post-actions">
+                <button class="action-btn like-btn" onclick="handleLike(this)">
+                    <span class="icon">❤️</span>
+                    <span class="count">0</span>
+                </button>
+                <button class="action-btn dislike-btn" onclick="handleDislike(this)">
+                    <span class="icon">👎</span>
+                    <span class="count">0</span>
+                </button>
+            </div>
+        </article>
+
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2026 Blog do Breno Zanin. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,222 @@
+/* Variáveis para o Modo Claro (Predominância Azul) */
+:root {
+    --bg-color: #eff6ff;
+    --card-bg: #ffffff;
+    --text-color: #1e293b;
+    --text-muted: #64748b;
+    --header-bg: linear-gradient(135deg, #1d4ed8, #2563eb);
+    --header-text: #ffffff;
+    --card-border: #cbd5e1;
+    --accent-blue: #2563eb;
+    --btn-bg: #f1f5f9;
+    --btn-border: #cbd5e1;
+    --shadow: 0 4px 12px rgba(37, 99, 235, 0.08);
+}
+
+/* Estilos para o Modo Escuro */
+body.dark-mode {
+    --bg-color: #0f172a;
+    --card-bg: #1e293b;
+    --text-color: #f8fafc;
+    --text-muted: #94a3b8;
+    --header-bg: linear-gradient(135deg, #0f172a, #1e3a8a);
+    --header-text: #f8fafc;
+    --card-border: #334155;
+    --accent-blue: #3b82f6;
+    --btn-bg: #334155;
+    --btn-border: #475569;
+    --shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+/* Reset Global */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Cabeçalho Azul */
+.header {
+    background: var(--header-bg);
+    color: var(--header-text);
+    padding: 2rem 1rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    border-bottom: 4px solid #3b82f6;
+}
+
+.header-container {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.logo h1 {
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.logo p {
+    font-size: 0.95rem;
+    opacity: 0.9;
+}
+
+/* Botão do Modo Escuro / Claro */
+.theme-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: rgba(255, 255, 255, 0.15);
+    color: var(--header-text);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 600;
+    backdrop-filter: blur(5px);
+}
+
+.theme-btn:hover {
+    background-color: rgba(255, 255, 255, 0.25);
+}
+
+.half-moon-icon {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/* Área Principal dos Posts */
+.main-content {
+    max-width: 800px;
+    width: 100%;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    flex: 1;
+}
+
+/* Card dos Posts */
+.post {
+    background-color: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 12px;
+    padding: 1.8rem;
+    margin-bottom: 2rem;
+    box-shadow: var(--shadow);
+    border-left: 5px solid var(--accent-blue);
+}
+
+.post-tag {
+    display: inline-block;
+    background-color: var(--accent-blue);
+    color: #ffffff;
+    font-size: 0.75rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 0.2rem 0.6rem;
+    border-radius: 4px;
+    margin-bottom: 0.6rem;
+}
+
+.post-title {
+    font-size: 1.5rem;
+    margin-bottom: 0.3rem;
+}
+
+.post-date {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-bottom: 1.2rem;
+}
+
+.post-body p {
+    margin-bottom: 1rem;
+}
+
+.post-body ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.post-body li {
+    margin-bottom: 0.6rem;
+    padding-left: 0.5rem;
+}
+
+/* Botões de Interação (Curtir / Deslike) */
+.post-actions {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--card-border);
+}
+
+.action-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: var(--btn-bg);
+    border: 1px solid var(--btn-border);
+    color: var(--text-color);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: transform 0.1s ease, background-color 0.2s ease;
+}
+
+.action-btn:hover {
+    transform: scale(1.05);
+}
+
+/* Destaque quando o botão está ativo */
+.action-btn.liked {
+    background-color: #ffe4e6;
+    border-color: #f43f5e;
+    color: #e11d48;
+}
+
+body.dark-mode .action-btn.liked {
+    background-color: #4c0519;
+    border-color: #f43f5e;
+    color: #fda4af;
+}
+
+.action-btn.disliked {
+    background-color: #fef3c7;
+    border-color: #f59e0b;
+    color: #b45309;
+}
+
+body.dark-mode .action-btn.disliked {
+    background-color: #451a03;
+    border-color: #f59e0b;
+    color: #fde68a;
+}
+
+/* Rodapé */
+.footer {
+    text-align: center;
+    padding: 1.5rem;
+    background-color: var(--card-bg);
+    border-top: 1px solid var(--card-border);
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    margin-top: auto;
+}
