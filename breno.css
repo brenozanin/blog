@@ -14,18 +14,18 @@
 }
 
 /* Estilos para o Modo Escuro */
-body.dark-mode {
-    --bg-color: #0f172a;
-    --card-bg: #1e293b;
-    --text-color: #f8fafc;
-    --text-muted: #94a3b8;
-    --header-bg: linear-gradient(135deg, #0f172a, #1e3a8a);
-    --header-text: #f8fafc;
-    --card-border: #334155;
+    body.dark-mode {
+    --bg-color: #000000;       /* Fundo da página preto */
+    --card-bg: #000000;        /* Fundo dos posts preto */
+    --text-color: #ffffff;     /* Letras brancas */
+    --text-muted: #d1d5db;     /* Subtítulos em branco suave */
+    --header-bg: #000000;      /* Cabeçalho preto */
+    --header-text: #ffffff;
+    --card-border: #444444;    /* Borda para separar os posts do fundo */
     --accent-blue: #3b82f6;
-    --btn-bg: #334155;
-    --btn-border: #475569;
-    --shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    --btn-bg: #111111;
+    --btn-border: #555555;
+    --shadow: none;
 }
 
 /* Reset Global */
@@ -40,7 +40,19 @@ body.dark-mode {
 body {
     background-color: var(--bg-color);
     color: var(--text-color);
-    line-height: 1.6;
+    line-height: 1.6;body.dark-mode {
+    --bg-color: #000000;       /* Fundo da página preto */
+    --card-bg: #000000;        /* Fundo dos posts preto */
+    --text-color: #ffffff;     /* Letras brancas */
+    --text-muted: #d1d5db;     /* Subtítulos em branco suave */
+    --header-bg: #000000;      /* Cabeçalho preto */
+    --header-text: #ffffff;
+    --card-border: #444444;    /* Borda para separar os posts do fundo */
+    --accent-blue: #3b82f6;
+    --btn-bg: #111111;
+    --btn-border: #555555;
+    --shadow: none;
+}
     min-height: 100vh;
     display: flex;
     flex-direction: column;
